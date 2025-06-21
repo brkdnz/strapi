@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solution_collections",
+  "info": {
+    "singularName": "solution-collection",
+    "pluralName": "solution-collections",
+    "displayName": "SolutionCollection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Thumbnail": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "sub_solution_collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-solution-collection.sub-solution-collection",
+      "mappedBy": "solution_collection"
+    }
+  }
+}

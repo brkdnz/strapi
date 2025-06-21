@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "solution_pages",
+  "info": {
+    "singularName": "solution-page",
+    "pluralName": "solution-pages",
+    "displayName": "SolutionPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "PageBadge": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Title1": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Title2": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "unique": false
+    },
+    "solution_collections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::solution-collection.solution-collection"
+    }
+  }
+}
